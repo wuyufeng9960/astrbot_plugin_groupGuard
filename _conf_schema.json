@@ -1,0 +1,12 @@
+{
+    "monitor_groups": {
+        "type": "list",
+        "description": "填写需要监控的群号，防止重复加群申请。",
+        "default": []
+    },
+    "target_groups": {
+        "type": "list",
+        "description": "填写目标群号列表，用户已在这些群中则拒绝加群申请。",
+        "default": []
+    }
+}
