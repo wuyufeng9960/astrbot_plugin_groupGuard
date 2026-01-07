@@ -52,6 +52,7 @@ class MyPlugin(Star):
                         member_status = {}
                         member_status = await client.api.call_action('get_group_member_info', group_id=int(target_group), user_id=int(user_id))
                     except Exception as e:
+                        logger.debug(f"检查用户 {user_id} 在群 {target_group} 中时出错: {e}")
                         continue
                     logger.info(f"用户 {user_id} 已在目标群 {target_group} 中，将拒绝加群申请")
                     await client.api.call_action('set_group_add_request', flag=get_value(raw_message, 'flag'), approve=False, reason=f"您已在群 {target_group} 中，请不要重复加群。")
