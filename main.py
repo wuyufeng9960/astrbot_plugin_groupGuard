@@ -25,7 +25,7 @@ def get_value(obj, key, default=None):
     except Exception:
             return default
 
-@register("groupGuard", "wuyufeng9960", "防重复加群", "0.9.0")
+@register("groupGuard", "星星旁の旷野", "防重复加群", "0.9.0")
 class MyPlugin(Star):
 
     def __init__(self, context: Context, config: dict = None):
